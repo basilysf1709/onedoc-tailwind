@@ -1,18 +1,21 @@
 import { Onedoc } from "@onedoc/client";
+import { compile } from "@onedoc/react-print";
+import { readFileSync, writeFileSync } from "fs";
+import { OneDocComponent } from "@/components/OneDocComponent";
+import { join } from "path";
 
 const onedoc = new Onedoc(process.env.ONEDOC_API_KEY as string);
 
-const addTailwindTags = (inputString: string): string => {
-  return `<Tailwind>${inputString}</Tailwind>`;
-}
 
-export async function POST(request: any) {
-  const jsonData = await request.json();
-  const htmlContent = jsonData.html;
+export async function GET() {
   const { file, error } = await onedoc.render({
-    html: addTailwindTags(htmlContent),
+    html: await compile(OneDocComponent()),
     test: false,
     assets: [
+      {
+        path: "./util/util.css",
+        content: readFileSync(join(process.cwd(), "./util/util.css")).toString(),
+      },
     ],
   });
 

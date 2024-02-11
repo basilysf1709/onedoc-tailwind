@@ -1,6 +1,5 @@
 'use client'
 import React, { useState, useEffect } from "react";
-import { htmlContent } from "./OneDocComponent";
 
 
 
@@ -10,13 +9,7 @@ export const OneDoc = () => {
   useEffect(() => {
     const fetchPdf = async () => {
       try {
-        const response = await fetch("/api/v1/getPDF", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ html: htmlContent }),
-        });
+        const response = await fetch("/api/v1/getPDF");
         const blob = await response.blob();
         setPdfData(URL.createObjectURL(blob));
       } catch (error) {

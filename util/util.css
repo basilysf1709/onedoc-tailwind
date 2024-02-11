@@ -1,0 +1,16 @@
+@page {
+  margin: 0;
+  size: A4;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('path_to_your_montserrat_font_file.woff2') format('woff2'),
+       url('path_to_your_montserrat_font_file.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
