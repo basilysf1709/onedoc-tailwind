@@ -3,13 +3,14 @@ import { compile } from "@onedoc/react-print";
 import { readFileSync, writeFileSync } from "fs";
 import { OneDocComponent } from "@/components/OneDocComponent";
 import { join } from "path";
+import { OfferLetter } from "@/components/OfferLetter";
 
 const onedoc = new Onedoc(process.env.ONEDOC_API_KEY as string);
 
 
 export async function GET() {
   const { file, error } = await onedoc.render({
-    html: await compile(OneDocComponent()),
+    html: await compile(OfferLetter()),
     test: false,
     assets: [
       {
