@@ -6,13 +6,13 @@ export const OfferLetter = () => {
   return (
     <Tailwind>
       <div className="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-gradient-to-r from-red-600 to-red-400 -z-10 absolute -left-[2cm] right-[25vw] -skew-y-12 h-[100vh] bottom-[95vh]"></div>
+        <div className="bg-gradient-to-r from-green-600 to-green-400 -z-10 absolute -left-[2cm] right-[25vw] -skew-y-12 h-[100vh] bottom-[95vh]"></div>
         <div className="text-center">
           <p className="mt-8 text-sm leading-7 text-gray-500 font-regular">
             STEPS
           </p>
           <h3 className="text-3xl sm:text-5xl leading-normal font-extrabold tracking-tight text-gray-900">
-            <span className="text-red-600">Laptop Onboarding</span>
+            <span className="text-green-600">Laptop Onboarding</span>
           </h3>
         </div>
 
@@ -21,7 +21,7 @@ export const OfferLetter = () => {
             {onboardingSteps.map((step, index) => (
               <li key={index}>
                 <div className="flex flex-col items-center text-center px-8 py-4">
-                  <div className="flex items-center justify-center h-10 w-10 rounded-full bg-red-500 text-white border-4 border-white text-xl font-semibold">
+                  <div className="flex items-center justify-center h-10 w-10 rounded-full bg-green-500 text-white border-4 border-white text-xl font-semibold">
                     {index + 1}
                   </div>
                   <div className="mt-4">
@@ -37,7 +37,7 @@ export const OfferLetter = () => {
             ))}
           </ul>
           <div className="text-center mt-3">
-            <IoIosCheckmarkCircleOutline className="text-red-500 text-6xl mx-auto" />
+            <IoIosCheckmarkCircleOutline className="text-green-500 text-6xl mx-auto" />
             <h3 className="text-xl font-semibold mt-2">Congratulations!</h3>
           </div>
         </div>
@@ -70,6 +70,6 @@ const onboardingSteps = [
   {
     title: "Configuring VPN Access",
     description:
-      "Open the VPN client software, enter configuration details, and verify the employee’s login credentials. Ensure a stable VPN connection.",
+      "Open the VPN client software, enter configuration details, and verify the employee’s login cgreenentials. Ensure a stable VPN connection.",
   },
 ];
