@@ -3,6 +3,7 @@ import { compile } from "@onedoc/react-print";
 import { readFileSync, writeFileSync } from "fs";
 import { CV } from "@/components/CV";
 import { join } from "path";
+import { OfferLetter } from "@/components/OfferLetter";
 
 const onedoc = new Onedoc(process.env.ONEDOC_API_KEY as string);
 
