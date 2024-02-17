@@ -1,7 +1,7 @@
 import { Onedoc } from "@onedoc/client";
 import { compile } from "@onedoc/react-print";
 import { readFileSync, writeFileSync } from "fs";
-import { OneDocComponent } from "@/components/OneDocComponent";
+import { CV } from "@/components/CV";
 import { join } from "path";
 import { OfferLetter } from "@/components/OfferLetter";
 
@@ -10,7 +10,7 @@ const onedoc = new Onedoc(process.env.ONEDOC_API_KEY as string);
 
 export async function GET() {
   const { file, error } = await onedoc.render({
-    html: await compile(OfferLetter()),
+    html: await compile(CV()),
     test: false,
     assets: [
       {
