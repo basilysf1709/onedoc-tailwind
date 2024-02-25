@@ -2,7 +2,7 @@ import { Tailwind } from "@onedoc/react-print";
 import { IoIosCheckmarkCircleOutline } from "react-icons/io";
 
 
-export const OfferLetter = () => {
+export const TechOnboarding = () => {
   return (
     <Tailwind>
       <div className="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8">
@@ -36,7 +36,7 @@ export const OfferLetter = () => {
               </li>
             ))}
           </ul>
-          <div className="text-center mt-3">
+          <div className="text-center">
             <IoIosCheckmarkCircleOutline className="text-green-500 text-6xl mx-auto" />
             <h3 className="text-xl font-semibold mt-2">Congratulations!</h3>
           </div>
@@ -65,7 +65,7 @@ const onboardingSteps = [
   {
     title: "Setting Up the UB Key",
     description:
-      "Insert the UB Key into the laptop’s USB port. Install and configure the UB Key software. Register the UB Key with the company’s security system. Train the employee on UB Key usage.",
+      "Insert the UB Key into the laptop’s USB port. Install and configure the UB Key software. Register the UB Key with the company’s security system.",
   },
   {
     title: "Configuring VPN Access",
