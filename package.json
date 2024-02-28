@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@onedoc/client": "^0.1.28",
-    "@onedoc/react-print": "^0.1.77",
+    "@onedoc/react-print": "^0.1.108",
     "dockermake": "^1.0.1",
     "next": "14.1.0",
     "react": "^18",
